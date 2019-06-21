@@ -59,4 +59,5 @@
   systemd:
     name: "{{ tomcat_service_name }}"
     enabled: "{% if tomcat_service_enabled_on_startup %}yes{% else %}no{% endif %}"
+    state: "{% if tomcat_service_enabled_on_startup %}started{% else %}stopped{% endif %}"
     daemon_reload: yes

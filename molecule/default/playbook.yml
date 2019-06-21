@@ -3,4 +3,4 @@
   hosts: all
   become: true
   roles:
-    - role: tomcat-ansible-role
+    - role: ansible-role-apache-tomcat

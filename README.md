@@ -1,10 +1,12 @@
-[![Build Status](https://travis-ci.org/zaxos/tomcat-ansible-role.svg?branch=master)](https://travis-ci.org/zaxos/tomcat-ansible-role)
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-_zaxos.tomcat--ansible--role-blue.svg)](https://galaxy.ansible.com/zaxos/tomcat-ansible-role/)
+[![Build Status](https://travis-ci.org/pescobar/ansible-role-apache-tomcat.svg?branch=master)](https://travis-ci.org/pescobar/ansible-role-apache-tomcat)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-pescobar.apache_tomcat-blue.svg)](https://galaxy.ansible.com/pescobar/apache_tomcat)
 
-tomcat-ansible-role
+pescobar.apache_tomcat
 ===================
 
 Ansible role to install and configure Apache Tomcat on CentOS/RHEL. 
+
+Fork of [tomcat-ansible-role](https://galaxy.ansible.com/zaxos/tomcat-ansible-role)
 
 
 Requirements
@@ -20,7 +22,7 @@ Requirements
 Installation
 ------------
 ```
-$ ansible-galaxy install zaxos.tomcat-ansible-role
+$ ansible-galaxy install pescobar.apache_tomcat
 ```
 
 Example Playbook
@@ -40,7 +42,7 @@ Example Playbook
         password: "us3rp@ssw0rd"
         roles: "tomcat"        
   roles:
-    - role: zaxos.tomcat-ansible-role
+    - role: pescobar.apache_tomcat
 ```
 
 Role Variables

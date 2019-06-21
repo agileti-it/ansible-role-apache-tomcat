@@ -1,10 +1,6 @@
 ---
 # tasks file for tomcat-ansible-role
 
-# TO FIX: these permissions don't seem to work
-# if you enable option tomcat_permissions_production:true then playbook tasks/set-production-permissions.yml is executed but
-# tomcat doesnt start because the tomcat user cannot write to /opt/tomcat/conf/localhost/
-
 - name: Set root directory owner/group for production installation
   file:
     path: "{{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}"

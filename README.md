@@ -25,15 +25,13 @@ Installation
 $ ansible-galaxy install pescobar.apache_tomcat
 ```
 
-Example Playbook
+Example Playbook (installing java from centos rpms)
 ----------------
 ```yaml
 - hosts: servers
+
   vars:
-    tomcat_version: 8.5.23
-    
-    tomcat_permissions_production: True
-    
+
     tomcat_users:
       - username: "tomcat"
         password: "t3mpp@ssw0rd"
@@ -41,7 +39,31 @@ Example Playbook
       - username: "exampleuser"
         password: "us3rp@ssw0rd"
         roles: "tomcat"        
+
   roles:
+    - role: pescobar.apache_tomcat
+```
+
+Example Playbook (installing java using external role)
+----------------
+```yaml
+- hosts: servers
+
+  vars:
+    
+    tomcat_install_java: false   # we install java using role pescobar.java_openjdk
+    tomcat_java_home: /opt/java  # we install java using role pescobar.java_openjdk
+
+    tomcat_users:
+      - username: "tomcat"
+        password: "t3mpp@ssw0rd"
+        roles: "tomcat,admin,manager,manager-gui"
+      - username: "exampleuser"
+        password: "us3rp@ssw0rd"
+        roles: "tomcat"        
+
+  roles:
+    - role: pescobar.java_openjdk
     - role: pescobar.apache_tomcat
 ```
 

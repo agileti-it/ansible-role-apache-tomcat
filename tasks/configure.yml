@@ -52,7 +52,7 @@
 - name: Configure service file {{ tomcat_service_name }}.service
   template:
     src: tomcat.service.j2
-    dest: /usr/lib/systemd/system/{{ tomcat_service_name }}.service
+    dest: /etc/systemd/system/{{ tomcat_service_name }}.service
   notify: restart tomcat
 
 - name: Enable tomcat service on startup

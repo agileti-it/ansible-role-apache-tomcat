@@ -23,6 +23,9 @@ tomcat_service_name: tomcat
 tomcat_jvm_memory_percentage_xms: 15
 tomcat_jvm_memory_percentage_xmx: 55
 
+# TO FIX: these permissions don't seem to work
+# if you enable this option playbook tasks/set-production-permissions.yml is executed but
+# tomcat doesnt start because the tomcat user cannot write to /opt/tomcat/conf/localhost/
 tomcat_permissions_production: False
 tomcat_webapps_auto_deployment: True
 tomcat_permissions_ensure_on_every_run: True

@@ -41,3 +41,4 @@
     owner: "{% if tomcat_permissions_production %}root{% else %}{{ tomcat_user }}{% endif %}"
     group: "{{ tomcat_group }}"
     creates: "{{ tomcat_install_path }}/apache-tomcat-{{ tomcat_version }}"
+  register: tomcat_installed

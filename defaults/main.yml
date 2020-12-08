@@ -57,3 +57,4 @@ tomcat_uninstall_remove_java: False
 tomcat_uninstall_remove_all: False
 
 tomcat_java_opts: "-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom"
+tomcat_catalina_opts_extra: ""

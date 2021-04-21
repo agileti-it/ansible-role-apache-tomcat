@@ -19,6 +19,7 @@
     name: "{{ tomcat_user }}"
     group: "{{ tomcat_group }}"
     uid: "{{ tomcat_user_uid | default(omit) }}"
+    system: "{{ tomcat_user_system | default(omit) }}"
     state: present
 
 - name: Check if tomcat tarball is already downloaded
